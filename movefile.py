@@ -1,7 +1,7 @@
 import os,shutil
 import time
 
-with open('vocplus.txt', encoding='utf-8') as f:
+with open('vocabulary.txt', encoding='utf-8') as f:
     contents = f.read().split('</>\n')
     filelist = []
     for item in contents:
@@ -10,14 +10,14 @@ with open('vocplus.txt', encoding='utf-8') as f:
         filename = item[index1:index2]
         filelist.append(filename)
 
-src_path='vocabularyMP3/'
-target_path='voc/'
+src_path='vocabulary/'
+target_path='Vocabulary Webster Longman Dict/voc/'
 
 for file in filelist:
     try:
         shutil.move(src_path+file,target_path+file) 
     except FileNotFoundError:
-        with open('notfound.txt', 'a', encoding='utf-8') as f:
+        with open('voc_notfound.txt', 'a', encoding='utf-8') as f:
             f.write(file+'\n')
         continue
 

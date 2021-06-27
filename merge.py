@@ -1,4 +1,4 @@
-with open('vocabularyMP3.txt', encoding='utf-8') as f:
+with open('LDOCE6.txt', encoding='utf-8') as f:
     vocabulary = f.read().split('</>\n')
     vocabulary_words = []
     for item in vocabulary:
@@ -6,7 +6,7 @@ with open('vocabularyMP3.txt', encoding='utf-8') as f:
         word = item[:index]
         vocabulary_words.append(word)
 
-with open('MWDOnline.txt', encoding='utf-8') as f:
+with open('vocabulary.txt', encoding='utf-8') as f:
     MWDOnline = f.read().split('</>\n')
     MWDOnline_words = []
     for item in MWDOnline:
@@ -17,14 +17,8 @@ with open('MWDOnline.txt', encoding='utf-8') as f:
 for item in vocabulary_words:
     if item not in MWDOnline_words:
         index = vocabulary_words.index(item)
-        with open('vocplus.txt', 'a', encoding='utf-8') as f:
+        with open('LDOCE6_plus.txt', 'a', encoding='utf-8') as f:
             f.write(vocabulary[index]+'</>\n')
 
-"""
-for item in vocabulary_words:
-    i = vocabulary_words.index(item)
-    if item not in vocabulary[i]:
-        print("whoops")
-"""
-print("Sucess!")
+print("Succeed!")
 

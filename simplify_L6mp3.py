@@ -1,4 +1,4 @@
-filename = 'L6mp3.txt'
+filename = 'LDOCE6Pronunciation.txt'
 
 with open(filename, encoding='utf-8') as f:
     contents = f.read().split('</>\n')
@@ -13,8 +13,8 @@ with open(filename, encoding='utf-8') as f:
         else:
           sound = '<a ' + item[index2:index3] + '></a>'
         
-        with open('L6.txt', 'a', encoding='utf-8') as f:
+        with open('LDOCE6.txt', 'a', encoding='utf-8') as f:
             f.write(f"{word}\n{sound}\n</>\n")
         
-print("success")
+print("succeed")
             

@@ -1,4 +1,4 @@
-filename = 'MWDOnline.txt'
+filename = 'webster_plus.txt'
 
 with open(filename, encoding='utf-8') as f:
     contents = f.read().split('</>\n')
@@ -16,7 +16,7 @@ for item in audios:
 
 for key, value in counts.items():
     if value > 1:
-        with open('repulica_audio.txt', 'a', encoding='utf-8') as f:
+        with open('duplica_audio.txt', 'a', encoding='utf-8') as f:
             f.write(f"{key}\n")
 
-print("success")
+print("succeed!")
